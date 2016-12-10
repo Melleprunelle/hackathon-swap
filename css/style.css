@@ -31,7 +31,16 @@ section {
 }
 
 section div {
+    position: relative;
     border-bottom: 1px dashed #222;
+}
+
+section div img {
+    position: absolute;
+    top: 10px;
+    left: 38vw;
+    width: 25%;
+    opacity: .7;
 }
 
 #head {
