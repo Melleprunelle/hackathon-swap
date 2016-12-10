@@ -37,13 +37,13 @@ section {
 }
 
 #chest {
-    height: 25vh;
+    height: 22vh;
     background-color: cadetblue;
     opacity: .5;
 }
 
 #pants {
-    height: 30vh;
+    height: 33vh;
     background-color: limegreen;
     opacity: .5;
 }
