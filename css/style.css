@@ -15,6 +15,7 @@ header {
 }
 
 header h1 {
+    margin: 0;
     text-transform: uppercase;
 }
 
@@ -24,5 +25,31 @@ header h1 {
 
 section {
     height: 90vh;
-    background-color: #159;
+    background-image: url(../images/mannequin.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+
+#head {
+    height: 15vh;
+    background-color: darkred;
+    opacity: .5;
+}
+
+#chest {
+    height: 25vh;
+    background-color: cadetblue;
+    opacity: .5;
+}
+
+#pants {
+    height: 30vh;
+    background-color: limegreen;
+    opacity: .5;
+}
+
+#shoes {
+    height: 20vh;
+    background-color:  mediumpurple;
+    opacity: .5;
 }
