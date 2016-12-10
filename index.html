@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Hackathon Swap</title>
@@ -9,9 +10,24 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-    <header>
-        <h1>test</h1>
-    </header>
+    <!-- NABAR DE L'APPLICATION -->
+    <nav>
+        <div class="unfold-menu" onclick="unfoldMenu()">
+            <span class="unfold-deco"></span>
+            <span class="unfold-deco"></span>
+            <span class="unfold-deco"></span>
+        </div>
+        <ul id="menu">
+            <li class="active" onclick="location.href='index.html';"><a href="#">Accueil</a></li>
+            <li onclick="location.href='prestation.html';"><a href="#">Prestations</a></li>
+            <li onclick="location.href='conseil.html';"><a href="#">Fiches conseil</a></li>
+            <li onclick="location.href='vente.html';"><a href="#">Espace vente</a></li>
+            <li onclick="location.href='priserdv.html';"><a href="#">Prise de rdv</a></li>
+            <li onclick="location.href='contact.html';"><a href="#">Contact</a></li>
+        </ul>
+    </nav>
 </body>
+
 </html>
