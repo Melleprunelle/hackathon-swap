@@ -1,0 +1,15 @@
+INSERT INTO clothes (link,position_id,categories_id) VALUES ('https://media.printemps.com/media/sys_master/hf5/hf5/8797233381406.jpg',1,1);
+INSERT INTO clothes (link,position_id,categories_id) VALUES ('https://media.printemps.com/media/sys_master/hbf/ha9/8797233905694.jpg',1,1);
+INSERT INTO clothes (link,position_id,categories_id) VALUES ('https://media.printemps.com/media/sys_master/hbd/hda/8797252452382.jpg',1,1);
+INSERT INTO clothes (link,position_id,categories_id) VALUES ('https://media.printemps.com/media/sys_master/h29/h90/8797234102302.jpg',1,1);
+INSERT INTO clothes (link,position_id,categories_id) VALUES ('https://media.printemps.com/media/sys_master/h11/h62/8797271195678.jpg',1,1);
+INSERT INTO clothes (link,position_id,categories_id) VALUES ('https://media.printemps.com/media/sys_master/h57/ha0/8797234888734.jpg',1,1);
+INSERT INTO clothes (link,position_id,categories_id) VALUES ('https://media.printemps.com/media/sys_master/h52/hdd/8797234495518.jpg',1,1);
+INSERT INTO clothes (link,position_id,categories_id) VALUES ('https://media.printemps.com/media/sys_master/h30/h9b/8797234692126.jpg',1,1);
+INSERT INTO clothes (link,position_id,categories_id) VALUES ('https://media.printemps.com/media/sys_master/h57/ha0/8797234888734.jpg',1,1);
+INSERT INTO clothes (link,position_id,categories_id) VALUES ('https://media.printemps.com/media/sys_master/h52/hdd/8797234495518.jpg',1,1);
+INSERT INTO clothes (link,position_id,categories_id) VALUES ('https://media.printemps.com/media/sys_master/hc6/h0c/8797252059166.jpg',1,1);
+INSERT INTO clothes (link,position_id,categories_id) VALUES ('https://media.printemps.com/media/sys_master/images/h12/h24/8797282893854.jpg',1,1);
+INSERT INTO clothes (link,position_id,categories_id) VALUES ('https://media.printemps.com/media/sys_master/h83/h2c/8797338599454.jpg',1,1);
+INSERT INTO clothes (link,position_id,categories_id) VALUES ('https://media.printemps.com/media/sys_master/hbe/h02/8796696412190.jpg',1,1);
+INSERT INTO clothes (link,position_id,categories_id) VALUES ('https://media.printemps.com/media/sys_master/h85/h3c/8796697362462.jpg',1,1);
