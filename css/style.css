@@ -4,6 +4,28 @@ body {
     padding: 0px;
 }
 
+.sexe {
+    height: 100vh;
+    background-color: crimson;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sexe img {
+    width: 30vw;
+    margin: 25px;
+    cursor: pointer;
+}
+
+#male {
+    width: 25vw;
+}
+
+.model {
+    display: none;
+}
 
 /* ==========================================================================
    HEADER
@@ -17,6 +39,7 @@ body {
     border-bottom: 1px solid rgba(36, 36, 36, .3);
     align-items: center;
     padding: 0 15px;
+    background-color: white;
 }
 
 header h1 {
@@ -43,6 +66,7 @@ header span {
 }
 
 header ul {
+    margin: 0;
     background-color: white;
     width: 100%;
     padding: 0px;
@@ -56,6 +80,7 @@ header li {
     align-items: center;
     text-transform: uppercase;
     padding: 0 15px;
+    cursor: pointer;
 }
 
 header a {
