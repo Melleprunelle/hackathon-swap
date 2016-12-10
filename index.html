@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <script src="lib/js/angular.min.js"></script>
     <script src="lib/js/jquery-3.1.1.min.js"></script>
+    <script src="script/script.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -15,8 +16,18 @@
     
     <!-- NABAR DE L'APPLICATION -->
     <header>
-        <h1>printemps</h1>
-        <button></button>
+        <div class="header">
+            <h1>printemps</h1>
+            <div class="burger" onclick="AffNavbar()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <ul id="navbar">
+            <li><a href="">Réaliser votre tenue</a></li>
+            <li><a href="">Créer votre modèle de mannequin</a></li>
+        </ul>
     </header>
     
     <section>
