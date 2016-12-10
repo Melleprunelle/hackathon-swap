@@ -1,24 +1,18 @@
-{
-    "records":[
+
+    [
         {
-            "name":"faire la vaiselle",
-            "completed":false
+            "name":"faire la vaiselle"
         },
         {
-            "name":"préparer la bouf pour demain",
-            "completed":false
+            "name":"préparer la bouf pour demain"
         },
         {
-            "name":"faire doc pour le site de pôle dance",
-            "completed":false
+            "name":"faire doc pour le site de pôle dance"
         },
         {
-            "name":"raccrocher le poster qui s'est barré",
-            "completed":false
+            "name":"raccrocher le poster qui s'est barré"
         },
         {
-            "name":"engueuler sfr ! ! !",
-            "completed":false
+            "name":"engueuler sfr ! ! !"
         }
     ]
-}
