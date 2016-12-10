@@ -13,7 +13,7 @@ function getImages(zone) {
     var dess = {};
     
     
-    var url = "http://localhost/hackathon-swap/test.json"/* + "/?" + zone*/;
+    var url = "http://192.168.10.63/woman/head"/* + "/?" + zone*/;
     
     
     $.get(url, function(){
@@ -23,7 +23,7 @@ function getImages(zone) {
         // exploiter la reponse
         dress = /*JSON.parse*/(data);
         for (var i = 0; i < 5; i++) {
-            console.log(dress[i].name);
+            console.log(dress.name);
         }
     }).fail(function () {
         alert("error");

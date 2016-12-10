@@ -6,46 +6,57 @@
     <title>Hackathon Swap</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="lib/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="lib/js/jquery-3.1.1.min.js"></script>
     <script src="js/button.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/sexe.js"></script>
 </head>
-
+ 
 <body>
+
+    <div class="sexe">
+        <img src="images/gender-1.svg" alt="" id="femme">
+        <img src="images/male-gender-symbol.svg" id="male" alt="">
+        <img src="images/gender-2.svg" alt="">
+    </div>
     <!-- NABAR DE L'APPLICATION -->
-    <header>
-        <div class="header">
-            <h1>printemps</h1>
-            <div class="burger" onclick="AffNavbar()">
-                <span></span>
-                <span></span>
-                <span></span>
+    <div class="model">
+        <header>
+            <div class="header">
+                <h1>printemps</h1>
+                <div class="burger" onclick="AffNavbar()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
-        </div>
-        <ul id="navbar">
-            <li><a href="">Réaliser votre tenue</a></li>
-            <li><a href="">Créer votre modèle de mannequin</a></li>
-        </ul>
-    </header>
-    
-    <section>
-        <div id="head">
-            
-        </div>
-        
-        <div id="chest">
-            <button id="next-chest">></button>
-        </div>
-        
-        <div id="pants">
-        
-        </div>
-        
-        <div id="shoes">
-            
-        </div>    
-    </section>
+            <ul id="navbar">
+                <li><a href="">Réaliser votre tenue</a></li>
+                <li><a href="">Créer votre modèle de mannequin</a></li>
+            </ul>
+        </header>
+        <section>
+            <div id="head">
+
+            </div>
+
+            <div id="chest">
+                <i id="next-chest" class="fa fa-2x fa-arrow-right" aria-hidden="true"></i>
+                <img src="images/chemise1.png" alt="">
+            </div>
+
+            <div id="pants">
+                <img src="images/pentalon1.png" alt="">
+            </div>
+
+            <div id="shoes">
+
+            </div>
+
+        </section>
+    </div>
 </body>
 
 </html>
