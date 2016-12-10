@@ -30,26 +30,22 @@ section {
     background-position: center center;
 }
 
+section div {
+    border-bottom: 1px dashed #222;
+}
+
 #head {
     height: 15vh;
-    background-color: darkred;
-    opacity: .5;
 }
 
 #chest {
     height: 22vh;
-    background-color: cadetblue;
-    opacity: .5;
 }
 
 #pants {
     height: 33vh;
-    background-color: limegreen;
-    opacity: .5;
 }
 
 #shoes {
     height: 20vh;
-    background-color:  mediumpurple;
-    opacity: .5;
 }
