@@ -1,23 +1,34 @@
 $(document).ready(function(){
 
 var n_chest = 0;
-initImages('chest');
+var n_pant = 0;
+initImages('chest', 'chest');
+initImages('pants', 'pants');
 
 
-$('#next-chest').click(function(){
+$('#chest #next').click(function(){
     // on demande la prochaine robe, prochain pull...
-    nextImages('chest');
+    nextImages('chest', 'chest');
     
 });
-$('#prev-chest').click(function(){
+$('#chest #prev').click(function(){
     // on demande la robe précèdente...
-    prevImages('chest');
+    prevImages('chest', 'chest');
+});
+$('#pants #next').click(function(){
+    // on demande la prochaine robe, prochain pull...
+    nextImages('pants', 'pants');
+    
+});
+$('#pants #prev').click(function(){
+    // on demande la robe précèdente...
+    prevImages('pants', 'pants');
 });
 
 
-function initImages(zone) {
+function initImages(zone, type) {
     
-    var url = "https://megaju.github.io/hackathon-swap/test.json";
+    var url = "http://localhost/hackathon-swap/"+type+".json";
     
     $.get(url, "json").done(function(data) {
         
@@ -36,9 +47,9 @@ function initImages(zone) {
     
 }
     
-function nextImages(zone) {
+function nextImages(zone, type) {
     
-    var url = "https://megaju.github.io/hackathon-swap/test.json";
+    var url = "http://localhost/hackathon-swap/"+type+".json";
     
     $.get(url, "json").done(function(data) {
         
@@ -64,9 +75,9 @@ function nextImages(zone) {
     
 }
     
-function prevImages(zone) {
+function prevImages(zone, type) {
     
-    var url = "https://megaju.github.io/hackathon-swap/test.json";
+    var url = "http://localhost/hackathon-swap/"+type+".json";
     
     $.get(url, "json").done(function(data) {
         
@@ -77,12 +88,10 @@ function prevImages(zone) {
             $('#'+zone+' img').remove();
             n_chest = dressLen-1;
             $('#'+zone).append('<img src="' + dress[n_chest].name + '">');
-            console.log(n_chest);
         } else {
             $('#'+zone+' img').remove();
             n_chest--;
             $('#'+zone).append('<img src="' + dress[n_chest].name + '">');
-            console.log(n_chest);
         }
     
     }).fail(function () {
