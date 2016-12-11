@@ -22,6 +22,7 @@ function initImages(zone) {
     $.get(url, "json").done(function(data) {
         
         var dress = (data);
+        var dressLen = dress.length;
         
         $('#'+zone+' img').remove();
         
@@ -42,11 +43,20 @@ function nextImages(zone) {
     $.get(url, "json").done(function(data) {
         
         dress = (data);
+        dressLen = dress.length;
         
-        $('#'+zone+' img').remove();
-        n_chest++;
-        $('#'+zone).append('<img src="' + dress[n_chest].name + '">');
-        console.log(n_chest);
+        if (n_chest === dressLen - 1) {
+            $('#'+zone+' img').remove();
+            console.log(n_chest);
+            n_chest = 0;
+            $('#'+zone).append('<img src="' + dress[n_chest].name + '">');
+        } else {
+            $('#'+zone+' img').remove();
+            n_chest++;
+            $('#'+zone).append('<img src="' + dress[n_chest].name + '">');
+            console.log(n_chest);
+        }
+        
     
     }).fail(function () {
         //alert("error");
@@ -63,11 +73,19 @@ function prevImages(zone) {
     $.get(url, "json").done(function(data) {
         
         dress = (data);
+        dressLen = dress.length;
         
-        $('#'+zone+' img').remove();
-        n_chest--;
-        $('#'+zone).append('<img src="' + dress[n_chest].name + '">');
-        console.log(n_chest);
+        if (n_chest <= 0) {
+            $('#'+zone+' img').remove();
+            n_chest = dressLen-1;
+            $('#'+zone).append('<img src="' + dress[n_chest].name + '">');
+            console.log(n_chest);
+        } else {
+            $('#'+zone+' img').remove();
+            n_chest--;
+            $('#'+zone).append('<img src="' + dress[n_chest].name + '">');
+            console.log(n_chest);
+        }
     
     }).fail(function () {
         //alert("error");
