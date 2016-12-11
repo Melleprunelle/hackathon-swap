@@ -74,13 +74,14 @@ body {
     border-bottom: 1px solid rgba(36, 36, 36, .3);
     align-items: center;
     padding: 0 15px;
-    background-color: whitesmoke;
+    background-color: #483c32;
 }
 
 header h1 {
     text-transform: uppercase;
     cursor: pointer;
-    color: #483c32;
+    color: whitesmoke;
+    font-size: 1em;
 }
 
 .burger {
@@ -112,15 +113,15 @@ header a {
 }
 
 header span {
-    height: 4px;
-    background-color: #483c32;
+    height: 2px;
+    background-color: whitesmoke;
     width: 100%;
-    margin: 3px;
+    margin: 2px;
 }
 
 header ul {
     margin: 0;
-    background-color: whitesmoke;
+    background-color: #483c32;
     width: 100%;
     padding: 0px;
 }
@@ -137,8 +138,9 @@ header li {
 }
 
 header a {
-    color: #000;
+    color: whitesmoke;
     text-decoration: none;
+    font-size: .9em;
 }
 
 #navbar {
@@ -195,4 +197,8 @@ section div img {
     right: 50px;
     z-index: 999;
     color: #483c32;
+}
+
+.transition {
+    transform: translateX(200px);
 }
