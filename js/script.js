@@ -17,7 +17,7 @@ $('#prev-chest').click(function(){
 
 function initImages(zone) {
     
-    var url = "https://localhost/hackathon-swap/test.json";
+    var url = "https://megaju.github.io/hackathon-swap/test.json";
     
     $.get(url, "json").done(function(data) {
         
