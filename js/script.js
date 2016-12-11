@@ -28,7 +28,7 @@ $('#pants #prev').click(function(){
 
 function initImages(zone, type) {
     
-    var url = "https://megaju.github.io/hackathon-swap/"+type+".json";
+    var url = "http://localhost/hackathon-swap/"+type+".json";
     
     $.get(url, "json").done(function(data) {
         
@@ -49,7 +49,7 @@ function initImages(zone, type) {
     
 function nextImages(zone, type) {
     
-    var url = "https://megaju.github.io/hackathon-swap/"+type+".json";
+    var url = "http://localhost/hackathon-swap/"+type+".json";
     
     $.get(url, "json").done(function(data) {
         
@@ -77,7 +77,7 @@ function nextImages(zone, type) {
     
 function prevImages(zone, type) {
     
-    var url = "https://megaju.github.io/hackathon-swap/"+type+".json";
+    var url = "http://localhost/hackathon-swap/"+type+".json";
     
     $.get(url, "json").done(function(data) {
         
@@ -101,6 +101,5 @@ function prevImages(zone, type) {
     });
     
 }
-    
     
 });
