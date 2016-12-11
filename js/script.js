@@ -38,7 +38,7 @@ function initImages(zone) {
     
 function nextImages(zone) {
     
-    var url = "https://localhost/hackathon-swap/test.json";
+    var url = "https://megaju.github.io/hackathon-swap/test.json";
     
     $.get(url, "json").done(function(data) {
         
@@ -66,7 +66,7 @@ function nextImages(zone) {
     
 function prevImages(zone) {
     
-    var url = "https://localhost/hackathon-swap/test.json";
+    var url = "https://megaju.github.io/hackathon-swap/test.json";
     
     $.get(url, "json").done(function(data) {
         
