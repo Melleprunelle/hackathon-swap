@@ -8,12 +8,14 @@
 </head>
 
 <body>
-Document de référence : https://www.html5rocks.com/en/tutorials/device/orientation/
+Document de rÃ©fÃ©rence : https://www.html5rocks.com/en/tutorials/device/orientation/
 <br/>
 <br/>
-<a href='#'  onClick='javascript:if (window.DeviceMotionEvent) { alert("DeviceMotionEvent supported"); } else {alert("not sopprted !");}'  >
-Test des fonctions html5 de détection des mouvements du smartphone
+<a href='#'  onClick='javascript:if (window.DeviceMotionEvent) { document.getElementById("r").value="DeviceMotionEvent supported"; } else {document.getElementById("r").value="not supported !";}'  >
+Test des fonctions html5 de dÃ©tection des mouvements du smartphone
 </a>
+
+<input id="r" type='button' value=''>
 
 </body>
 
