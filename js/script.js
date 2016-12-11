@@ -17,16 +17,16 @@ $('#prev-chest').click(function(){
 
 function initImages(zone) {
     
-    var url = "http://localhost/hackathon-swap/test.json";
+    var url = "https://localhost/hackathon-swap/test.json";
     
     $.get(url, "json").done(function(data) {
         
         var dress = (data);
+        var dressLen = dress.length;
         
         $('#'+zone+' img').remove();
-            
+        
         $('#'+zone).append('<img src="' + dress[n_chest].name + '">');
-
     
     }).fail(function () {
         //alert("error");
@@ -38,16 +38,23 @@ function initImages(zone) {
     
 function nextImages(zone) {
     
-    var url = "http://localhost/hackathon-swap/test.json";
+    var url = "https://localhost/hackathon-swap/test.json";
     
     $.get(url, "json").done(function(data) {
         
         dress = (data);
+        dressLen = dress.length;
         
-        $('#'+zone+' img').remove();
-        n_chest++;
-        $('#'+zone).append('<img src="' + dress[n_chest].name + '">');
-        console.log(n_chest);
+        if (n_chest === dressLen - 1) {
+            $('#'+zone+' img').remove();
+            n_chest = 0;
+            $('#'+zone).append('<img src="' + dress[n_chest].name + '">');
+        } else {
+            $('#'+zone+' img').remove();
+            n_chest++;
+            $('#'+zone).append('<img src="' + dress[n_chest].name + '">');
+        }
+        
     
     }).fail(function () {
         //alert("error");
@@ -59,18 +66,24 @@ function nextImages(zone) {
     
 function prevImages(zone) {
     
-    var url = "http://localhost/hackathon-swap/test.json";
+    var url = "https://localhost/hackathon-swap/test.json";
     
     $.get(url, "json").done(function(data) {
         
         dress = (data);
+        dressLen = dress.length;
         
-        $('#'+zone+' img').remove();
-        n_chest--;
-        $('#'+zone).css("transition", "5s");
-        $('#'+zone).append('<img src="' + dress[n_chest].name + '">');
-
-        console.log(n_chest);
+        if (n_chest <= 0) {
+            $('#'+zone+' img').remove();
+            n_chest = dressLen-1;
+            $('#'+zone).append('<img src="' + dress[n_chest].name + '">');
+            console.log(n_chest);
+        } else {
+            $('#'+zone+' img').remove();
+            n_chest--;
+            $('#'+zone).append('<img src="' + dress[n_chest].name + '">');
+            console.log(n_chest);
+        }
     
     }).fail(function () {
         //alert("error");
