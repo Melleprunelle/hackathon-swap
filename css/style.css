@@ -200,8 +200,8 @@ section div img {
 }
 
 [class*="arrow-right"] {
-    right: 25px;
+    right: 50px;
 }
 [class*="arrow-left"] {
-    left: 25px;
+    left: 50px;
 }
