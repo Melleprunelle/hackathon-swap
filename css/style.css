@@ -194,11 +194,13 @@ section div img {
 .fa {
     position: absolute;
     top: 40%;
-    right: 50px;
     z-index: 999;
     color: #483c32;
 }
 
-.transition {
-    transform: translateX(200px);
+[class*="arrow-right"] {
+    right: 25px;
+}
+[class*="arrow-left"] {
+    left: 25px;
 }

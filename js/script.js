@@ -1,36 +1,76 @@
-$(document).ready(function(){  
+$(document).ready(function(){
+
+var n_chest = 0;
+initImages('chest');
 
 
 $('#next-chest').click(function(){
     // on demande la prochaine robe, prochain pull...
-    getImages('chest');
+    nextImages('chest');
+    
+});
+$('#prev-chest').click(function(){
+    // on demande la robe précèdente...
+    prevImages('chest');
 });
 
-var i = 0;
 
-function getImages(zone) {
+function initImages(zone) {
     
-    var dess = {};
+    var url = "http://localhost/hackathon-swap/test.json";
     
-    var url = "http://localhost/hackathon-swap/test.json"/* + "/?" + zone*/;
-    
-    
-    i++;
-    
-    $.get(url, function(){
-     // alert("success");
-    }, "json").done(function ( data ) {
-        //alert("reponse success=" + data);
-        // EPLOIT RESPONSE
-        dress = /*JSON.parse*/(data);
-        $('#chest img').remove();
+    $.get(url, "json").done(function(data) {
         
-        if (i == 5) {
-            i = 1;
-            $('#chest').append('<img src="' + dress[i].name + '">');
-        } else {
-            $('#chest').append('<img src="' + dress[i].name + '">');
-        }
+        var dress = (data);
+        
+        $('#'+zone+' img').remove();
+            
+        $('#'+zone).append('<img src="' + dress[n_chest].name + '">');
+
+    
+    }).fail(function () {
+        //alert("error");
+    }).always(function () {
+        //alert("finished");
+    });
+    
+}
+    
+function nextImages(zone) {
+    
+    var url = "http://localhost/hackathon-swap/test.json";
+    
+    $.get(url, "json").done(function(data) {
+        
+        dress = (data);
+        
+        $('#'+zone+' img').remove();
+        n_chest++;
+        $('#'+zone).append('<img src="' + dress[n_chest].name + '">');
+        console.log(n_chest);
+    
+    }).fail(function () {
+        //alert("error");
+    }).always(function () {
+        //alert("finished");
+    });
+    
+}
+    
+function prevImages(zone) {
+    
+    var url = "http://localhost/hackathon-swap/test.json";
+    
+    $.get(url, "json").done(function(data) {
+        
+        dress = (data);
+        
+        $('#'+zone+' img').remove();
+        n_chest--;
+        $('#'+zone).css("transition", "5s");
+        $('#'+zone).append('<img src="' + dress[n_chest].name + '">');
+
+        console.log(n_chest);
     
     }).fail(function () {
         //alert("error");
