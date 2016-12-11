@@ -17,7 +17,7 @@ $('#prev-chest').click(function(){
 
 function initImages(zone) {
     
-    var url = "http://localhost/hackathon-swap/test.json";
+    var url = "https://localhost/hackathon-swap/test.json";
     
     $.get(url, "json").done(function(data) {
         
@@ -38,7 +38,7 @@ function initImages(zone) {
     
 function nextImages(zone) {
     
-    var url = "http://localhost/hackathon-swap/test.json";
+    var url = "https://localhost/hackathon-swap/test.json";
     
     $.get(url, "json").done(function(data) {
         
@@ -47,14 +47,12 @@ function nextImages(zone) {
         
         if (n_chest === dressLen - 1) {
             $('#'+zone+' img').remove();
-            console.log(n_chest);
             n_chest = 0;
             $('#'+zone).append('<img src="' + dress[n_chest].name + '">');
         } else {
             $('#'+zone+' img').remove();
             n_chest++;
             $('#'+zone).append('<img src="' + dress[n_chest].name + '">');
-            console.log(n_chest);
         }
         
     
@@ -68,7 +66,7 @@ function nextImages(zone) {
     
 function prevImages(zone) {
     
-    var url = "http://localhost/hackathon-swap/test.json";
+    var url = "https://localhost/hackathon-swap/test.json";
     
     $.get(url, "json").done(function(data) {
         
