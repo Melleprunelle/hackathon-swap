@@ -6,31 +6,37 @@ $('#next-chest').click(function(){
     getImages('chest');
 });
 
+var i = 0;
 
 function getImages(zone) {
     
-    
     var dess = {};
     
+    var url = "http://localhost/hackathon-swap/test.json"/* + "/?" + zone*/;
     
-    var url = "http://192.168.10.63/woman/head"/* + "/?" + zone*/;
     
+    i++;
     
     $.get(url, function(){
      // alert("success");
     }, "json").done(function ( data ) {
-        alert("reponse success=" + data);
-        // exploiter la reponse
+        //alert("reponse success=" + data);
+        // EPLOIT RESPONSE
         dress = /*JSON.parse*/(data);
-        for (var i = 0; i < 5; i++) {
-            console.log(dress.name);
+        $('#chest img').remove();
+        
+        if (i == 5) {
+            i = 1;
+            $('#chest').append('<img src="' + dress[i].name + '">');
+        } else {
+            $('#chest').append('<img src="' + dress[i].name + '">');
         }
-    }).fail(function () {
-        alert("error");
-    }).always(function () {
-        alert("finished");
-    });
     
+    }).fail(function () {
+        //alert("error");
+    }).always(function () {
+        //alert("finished");
+    });
     
 }
     
